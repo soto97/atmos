@@ -1,7 +1,5 @@
 # README #
 
-#### What is this repository for? ####
-
 This is a coupled photochemistry-climate code. This model leverages
 the work by the Kasting, Zahnle, and Catling groups and represents an
 an effort to merge the various versions and features of the codes
