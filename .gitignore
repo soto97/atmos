@@ -13,12 +13,17 @@ PHOTOCHEM/OBJECTFILES/*
 CLIMA/OBJECT_CLIMA/*
 PHOTOCHEM/OBJECT_PHOT/*
 
+# Templates -- new ones should not go in the Git repository #
+#############################################################
+PHOTOCHEM/INPUTFILES/TEMPLATES/*
+
 # Runtime I/O files for Atmos models #
 #####################################
 PHOTOCHEM/OUTPUT/*
 PHOTOCHEM/profile.pt
 PHOTOCHEM/in.dist
 PHOTOCHEM/PTZ_mixingratios_in.dist
+PHOTOCHEM/INPUTFILES/in.dist
 PHOTOCHEM/INPUTFILES/parameters.inc
 PHOTOCHEM/INPUTFILES/reactions.rx
 PHOTOCHEM/INPUTFILES/species.dat
