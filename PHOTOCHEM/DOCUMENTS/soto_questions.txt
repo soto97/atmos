@@ -1,0 +1,12 @@
+# Alejandro Soto's questions about the Atmos code.
+
+## PHOTOCHEM Questions
+
+  * Is NEQ still used? For what? What is it?
+  * What is LDA?
+  * How do you define 'diurnal averaging factor (AGL)'
+  * What do ISEASON=0, ISEASON=1, and ISEASON=2 mean? Each of them indicate that P and T do not vary with time, but beyond that I don't know if there is a difference. Related questions, do values of 3 or greater for ISEASON have any special meaning? Or do all of those mean the same, i.e., that P and T are varying with time.
+
+## General issues
+
+  * A lot of the content in help_me.txt is out of date and/or wrong.
