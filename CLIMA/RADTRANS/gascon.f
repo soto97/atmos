@@ -8,12 +8,14 @@ C
 C  NGS is the number of gases in the solar code. The order of gases in
 C  this subroutine is: AIR, CH4,O2, O3, CO2, H2O, and H2. 
 
+
       REAL CON
       DIMENSION T(ND),PF(ND),FI(NS1,ND),F(NGS2,ND),FF(NGS2,ND),
      2  CGAS(ND,NGS2),FNC(ND)  ! Added noncondensible mixing fraction array c-rr 5/14/2011 
       COMMON/CONSS/C,BK,G,GNEW(ND),PI,SM,DM,DM2
 
-
+      print *, 'Entered GASCON'
+      print *, 'Defined variables in GASCON'
 C  
       NST = NST ! EWS - note that these are dummy arguments here
       T = T   
@@ -21,7 +23,7 @@ C
       CON = 2.687E19 ! to convert CGAS into molecules/cm^2.
       ! CON is taken by multiplying Loshcmidt's numnber 
 C
-
+      print *, 'Basical calcs done. GASCON'
 
       ! FNC is the volume amount of dry air/volume amount of total air
       ! With the exception of FCO2 and FH2O, all mixing ratios inputted here are volume amounts with respect to dry air (noncondensible species).
@@ -53,17 +55,29 @@ C
        F(8,J) = FI(5,J)*FNC(J) ! ethane
   5    CONTINUE
   
+      print *, 'First DO loop done.'
+      print *, 'ND = ', ND
+      print *, 'NGS2 = ', NGS2
     
       DO 3 I=1,NGS2
+      print *, 'I = ', I 
+      print *, 'F(I,1) = ', F(I,1)
       FF(I,1) = F(I,1)
+      print *, 'F(I,ND) = ', F(I,ND)
       FF(I,ND) = F(I,ND)
+      
+      print *, 'Second DO loop done.'
 
       DO 3 J=2,ND1
       FF(I,J) = SQRT(F(I,J)*F(I,J-1))  ! FF is sqrt of F for all layers except for layer 1 and layer ND
+      print *, 'J = ', J
+      print *, 'ND1 = ', ND1
+      print *, 'FF(I,J) = ', FF(I,J)
 
   3   CONTINUE
 C
-
+      print *, 'Second and third DO loops done.'
+      
       DO 4 I=1,NGS2   ! 8 species
       
       DO 4 J=1,ND1   ! 100 layers
@@ -73,6 +87,8 @@ C
      2  + FF(I,J+1))/(6.*DM) 
 !     Use Simpson's rule for more accuracy on mixing ratios    
        
+      print *, 'Fourth and fifth DO loops done.'
+      
   4    CONTINUE
 
 
@@ -92,6 +108,8 @@ C
 !      stop
 
 c 100  FORMAT(1X,1P10E12.5)
- 
+
+      print *, 'Leaving GASCON'
+       
       RETURN
       END
