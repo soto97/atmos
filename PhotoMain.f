@@ -919,13 +919,13 @@ c       stop
 C - SOME CHECKS TO MAKE SURE THE INPUT FILES JIVE WITH PARAMATERS.INC
 
        if (juniq-1.ne.ks) then
-          print *, 'discrepency between unique photolysis reactions/ks'
+          print *, 'discrepancy between unique photolysis reactions/ks'
           print *, juniq-1, ks
           stop
        endif
 
        if (SUM(INDEX(REACTYPE,'PHOTO')) .NE. kj) then
-          print *,'discrepency between number of photo reactions and kj'
+          print *,'discrepancy between number of photo reactions and kj'
           print *, SUM(INDEX(REACTYPE,'PHOTO')), kj
        stop
        endif
