@@ -16,6 +16,7 @@ PHOTOCHEM/OBJECT_PHOT/*
 # Templates -- new ones should not go in the Git repository #
 #############################################################
 PHOTOCHEM/INPUTFILES/TEMPLATES/*
+CLIMA/IO/TEMPLATES/
 
 # Runtime I/O files for Atmos models #
 #####################################
@@ -42,7 +43,7 @@ CLIMA/IO/IR_wavelength_grid.tab
 CLIMA/IO/FTIR.dat
 CLIMA/IO/FTSO.dat
 CLIMA/IO/input_clima.dat
-
+CLIMA/IO/fromPhoto2Clima.dat
 
 # Fortran detritus #
 ####################
