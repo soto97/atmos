@@ -7,4 +7,4 @@ that have been developed over the years by the groups using the code. Ashley Hor
 
 The model development was supported by NASA Astrobiology Institute's  Virtual Planetary Laboratory lead team, supported by NASA under cooperative agreement NNH05ZDA001C.
 
-### [Documentation](https://bitbucket.org/themartians/atmos/wiki)###
+**The documentation** is found in the [wiki](https://github.com/soto97/atmos/wiki).
