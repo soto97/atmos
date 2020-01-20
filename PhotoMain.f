@@ -765,7 +765,7 @@ C ***** REPLACE HOLLERITH LABELS WITH SPECIES NUMBERS IN JCHEM *****
       DO 5 M=1,5
       IF(CHEMJ(M,J).EQ.' ') GO TO 5
       DO 6 I=1,NSP2
-  !     print *, CHEMJ(M,J),ISPEC(I)
+      !print *, CHEMJ(M,J),ISPEC(I)
       IF(CHEMJ(M,J).NE.ISPEC(I)) GO TO 6
       JCHEM(M,J) = I
       GO TO 5
@@ -2764,12 +2764,12 @@ C-PK Write to file used for spectrum (VPL-SMART)
        do J=1,NZ
         PRES_bar(J) = DEN(J)*BOLTZ*T(J)*1e-6
        enddo
-      WRITE(159,938)
-      WRITE(159,937) (Z(I),T(I),DEN(I),PRES_bar(I),USOL(LH2O,I),
-     2 SL(LCH4,I)/DEN(I),SL(LC2H6,I)/DEN(I),SL(LCO2,I)/DEN(I),
-     & SL(LO2,I)/DEN(I),O3(I),
-     3 USOL(LCO,I),USOL(LH2CO,I),SL(LHNO3,I)/DEN(I),
-     4 USOL(LNO2,I),USOL(LSO2,I),USOL(LOCS,I),I=1,NZ)
+C      WRITE(159,938)
+C      WRITE(159,937) (Z(I),T(I),DEN(I),PRES_bar(I),USOL(LH2O,I),
+C     2 SL(LCH4,I)/DEN(I),SL(LC2H6,I)/DEN(I),SL(LCO2,I)/DEN(I),
+C     & SL(LO2,I)/DEN(I),O3(I),
+C     3 USOL(LCO,I),USOL(LH2CO,I),SL(LHNO3,I)/DEN(I),
+C     4 USOL(LNO2,I),USOL(LSO2,I),USOL(LOCS,I),I=1,NZ)
  938  FORMAT(1x,'    Alt      Temp       Den      Press      H2O ',
      2        '      CH4      C2H6       CO2      O2         O3  ',
      3        '      CO       H2CO       HNO3     NO2        SO2',
@@ -2789,12 +2789,12 @@ C-PK Write to file used for spectrum (VPL-SMART)
 
  937  FORMAT(1X,1P16E10.3)
  941  FORMAT(1X,1P16E10.3)
-      WRITE(164,939)
-      WRITE(164,940) (Z(I),T(I),DEN(I),PRES_bar(I),
-     & SL(LCO2,I)/DEN(I),SL(LCO,I)/DEN(I),SL(LC2H6,I)/DEN(I),
-     & SL(LH2CO,I)/DEN(I),
-     & USOL(LCH4,I),USOL(LHNO3,I),USOL(LNO2,I),USOL(LO2,I),O3(I),
-     & USOL(LSO2,I),USOL(LH2O,I),USOL(LOCS,I),I=1,NZ)
+c      WRITE(164,939)
+c      WRITE(164,940) (Z(I),T(I),DEN(I),PRES_bar(I),
+C     & SL(LCO2,I)/DEN(I),SL(LCO,I)/DEN(I),SL(LC2H6,I)/DEN(I),
+C     & SL(LH2CO,I)/DEN(I),
+C     & USOL(LCH4,I),USOL(LHNO3,I),USOL(LNO2,I),USOL(LO2,I),O3(I),
+C     & USOL(LSO2,I),USOL(LH2O,I),USOL(LOCS,I),I=1,NZ)
  939  FORMAT(1X,'    Alt      Temp       Den      Press      CO2 ',
      2       '       CO       C2H6       H2CO     CH4        HNO3',
      3       '       NO2      O2         O3       SO2        H2O ',

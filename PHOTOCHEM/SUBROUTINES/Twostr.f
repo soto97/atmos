@@ -236,14 +236,14 @@ C Also print TAUC at the ground for all wavelengths.
 
       IF(NN.EQ.1 .AND. IKN.EQ.1) THEN
       !ACK - check LUN
-      WRITE(22,114) WAV,TAUCTSTR(NZP1)   
+C      WRITE(22,114) WAV,TAUCTSTR(NZP1)   
  114  FORMAT(1X,F6.1,2X,1PE10.3)
       !ACK - what are these hardcoded wavelengths???
       IF (WAV.EQ.1860.5 .OR. WAV.EQ.2010. .OR. WAV.EQ.2116.5 .OR.  
      2    WAV.EQ.2211. .OR. WAV.EQ.2312.5 .OR. WAV.EQ.2516. .OR.
      3    WAV.EQ.3007.5 .OR. WAV.EQ.3900. .OR. WAV.EQ.4500.) THEN
       !ACK - check LUN
-      WRITE(20,106)WAV,U0,ALB    
+C      WRITE(20,106)WAV,U0,ALB    
  106  FORMAT('# WAV = ',F6.1,2X,'U0 = ',F6.4,2X,'Rsfc = ',F5.3,
      2   /'# TWOSTR: TAUCTSTR(N) is the optical depth above layer N',
      3   /'#  Z',4X,'TAUCTSTR(N)',4X,'TAU(N)',5X,'W0(N)',6X,'G(N)',6X,
